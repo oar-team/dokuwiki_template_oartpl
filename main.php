@@ -77,6 +77,14 @@ if (!defined('DOKU_INC')) die(); // must be run from within DokuWiki
                 <div class="searchbox">
                     <?php tpl_searchform(); ?>
                 </div>
+<form class="button" method="get" action="<?php wl($ID)?>">
+  <div class="no">
+    <input type="submit" value="Export to PDF" class="button" />
+    <input type="hidden" name="do" value="export_pdf" />
+    <input type="hidden" name="rev" value="<?php global $REV; echo $REV?>" />
+    <input type="hidden" name="id" value="<?php echo $ID?>" />
+  </div>
+</form>
             </div>
 
             <div class="clearer"></div>
@@ -146,6 +154,7 @@ if (!defined('DOKU_INC')) die(); // must be run from within DokuWiki
                             if($_SERVER['REMOTE_USER']){   // show only if user is logged in
                                 tpl_button('revert');
                                 tpl_button('edit');
+                                tpl_button('admin');
                                 tpl_actiondropdown(tpl_getLang('more_actions'));
                             }
                         }
@@ -157,6 +166,14 @@ if (!defined('DOKU_INC')) die(); // must be run from within DokuWiki
                     <div class="searchbox">
                         <?php tpl_searchform(); ?>
                     </div>
+<form class="button" method="get" action="<?php wl($ID)?>">
+  <div class="no">
+    <input type="submit" value="Export to PDF" class="button" />
+    <input type="hidden" name="do" value="export_pdf" />
+    <input type="hidden" name="rev" value="<?php global $REV; echo $REV?>" />
+    <input type="hidden" name="id" value="<?php echo $ID?>" />
+  </div>
+</form>
                 </div>
 
                 <div class="clearer"></div>
