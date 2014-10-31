@@ -28,9 +28,9 @@
 .dokuwiki .header {
     border-radius: 20px;
     height: 170px;
-    background: #154b99 url(images/banner.jpg);
     background-color: __header_background__;
     /* the background gradient is in gradients.less */
+    background: #154b99 url(images/banner.jpg);
     min-height: 120px;
     min-width: 825px;
     position: relative;
